@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CreateClientComponent } from './create-client/create-client.component';
 import {RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule,
     RouterModule,
     AppRoutingModule
