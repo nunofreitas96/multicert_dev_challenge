@@ -1,9 +1,9 @@
-package com.example.postgres;
+package com.challenge.postgres;
 
-import com.example.model.Client;
+import com.challenge.model.Client;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
-import com.example.queries.QueryStorage;
+import com.challenge.queries.QueryStorage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

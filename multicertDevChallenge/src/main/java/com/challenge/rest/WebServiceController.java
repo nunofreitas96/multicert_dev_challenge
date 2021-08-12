@@ -1,8 +1,8 @@
-package com.example.test;
+package com.challenge.rest;
 
-import com.example.model.Client;
-import com.example.postgres.PostgresConnection;
-import com.example.postgres.QueryExecutor;
+import com.challenge.model.Client;
+import com.challenge.postgres.PostgresConnection;
+import com.challenge.postgres.QueryExecutor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

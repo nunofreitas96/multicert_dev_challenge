@@ -1,4 +1,4 @@
-package com.example.test;
+package com.challenge.rest;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

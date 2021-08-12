@@ -1,4 +1,4 @@
-package com.example.model;
+package com.challenge.model;
 
 public class User {
     String firstName;

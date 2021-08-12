@@ -1,4 +1,4 @@
-package com.example.queries;
+package com.challenge.queries;
 
 public class QueryStorage {
 
