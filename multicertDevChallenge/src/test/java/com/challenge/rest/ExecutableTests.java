@@ -1,5 +1,6 @@
 package com.challenge.rest;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +15,7 @@ class ExecutableTests {
 
 	@Test
 	void test(){
-		assertTrue(true);
+		Assertions.assertTrue(true);
 	}
 
 }
