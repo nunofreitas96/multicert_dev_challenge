@@ -3,11 +3,18 @@ package com.challenge.rest;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.Assert.assertTrue;
+
 @SpringBootTest
-class TestApplicationTests {
+class ExecutableTests {
 
 	@Test
 	void contextLoads() {
+	}
+
+	@Test
+	void test(){
+		assertTrue(true);
 	}
 
 }
