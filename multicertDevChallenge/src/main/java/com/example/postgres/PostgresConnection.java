@@ -1,4 +1,4 @@
-package postgres;
+package com.example.postgres;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

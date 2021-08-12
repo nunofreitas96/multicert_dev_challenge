@@ -1,4 +1,4 @@
-package models;
+package com.example.model;
 
 public class Client {
 

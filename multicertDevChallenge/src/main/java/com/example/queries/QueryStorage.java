@@ -1,6 +1,4 @@
-package queries;
-
-import java.sql.Timestamp;
+package com.example.queries;
 
 public class QueryStorage {
 
