@@ -59,15 +59,17 @@ public class QueryExecutor {
         }
     }
 
-    public Client ExecuteGetClientByNif(int nif){
+    public ArrayList<Client> ExecuteGetClientByNif(int nif){
         String query = qs.getClientByNif(nif);
         try (PreparedStatement pst = c.prepareStatement(query); ResultSet rs = pst.executeQuery()){
             c.setAutoCommit(false);
-            rs.next();
-            Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")));
-
+            ArrayList<Client> callNumbers = new ArrayList<>();
+            while (rs.next()) {
+                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")));
+                callNumbers.add(client);
+            }
             rs.close();
-            return client;
+            return callNumbers;
 
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName()+": "+ e.getMessage() );

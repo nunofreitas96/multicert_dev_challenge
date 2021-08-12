@@ -1,8 +1,11 @@
 package com.challenge.model;
 
+import java.math.BigInteger;
+
 public class Client {
 
 
+    BigInteger id;
     String client_name;
     int client_nif;
     String client_address;

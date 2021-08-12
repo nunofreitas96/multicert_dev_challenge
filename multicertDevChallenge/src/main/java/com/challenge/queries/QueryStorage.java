@@ -16,18 +16,18 @@ public class QueryStorage {
     }
 
     public String getClientByNif(int client_nif){
-        return "SELECT client_name, client_nif, client_address, phone_number, id FROM client" +
-                "WHERE client.client_nid = '"+ client_nif +"'";
+        return "SELECT client_name as cname, client_nif as cnif, client_address as caddress, phone_number as pn, id FROM client" +
+                " WHERE client.client_nif = '"+ client_nif +"' ;";
     }
 
     public String getClientsByName(String getClientByName){
-        return "SELECT client_name, client_nif, client_address, phone_number, id FROM client" +
-                "WHERE client.client_name = '"+ getClientByName +"'";
+        return "SELECT client_name as cname, client_nif as cnif, client_address as caddress, phone_number as pn, id FROM client" +
+                " WHERE client.client_name = '"+ getClientByName +"';";
     }
 
     public String deleteClient(int id){
         return "DELETE FROM client" +
-                "WHERE client.id = "+ id +";";
+                " WHERE client.id = "+ id +";";
     }
 
 
