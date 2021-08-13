@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="multicertDevChallenge" target="16" />
+      <module name="multicertDevChallenge" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
