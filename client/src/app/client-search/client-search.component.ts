@@ -44,6 +44,14 @@ export class ClientSearchComponent implements OnInit {
       })
     }}
 
+  DeleteClient(cid:number): void{
+    this.http.delete('http://localhost:8080/deleteclient/' + cid).subscribe(data => {
+      this.http.get<any>('http://localhost:8080/clients').subscribe(data => {
+        this.clientResults = data;
+      })
+    })
+  }
+
 
 }
 

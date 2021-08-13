@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import com.challenge.queries.QueryStorage;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ public class QueryExecutor {
             c.setAutoCommit(false);
             ArrayList<Client> callNumbers = new ArrayList<>();
             while (rs.next()) {
-                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")));
+                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")), rs.getInt("cid"));
                 callNumbers.add(client);
             }
             rs.close();
@@ -45,7 +46,7 @@ public class QueryExecutor {
             c.setAutoCommit(false);
             ArrayList<Client> callNumbers = new ArrayList<>();
             while (rs.next()) {
-                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")));
+                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")), rs.getInt("cid"));
                 callNumbers.add(client);
             }
             rs.close();
@@ -65,7 +66,7 @@ public class QueryExecutor {
             c.setAutoCommit(false);
             ArrayList<Client> callNumbers = new ArrayList<>();
             while (rs.next()) {
-                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")));
+                Client client = new Client(rs.getString("cname"), Integer.parseInt(rs.getString("cnif")), rs.getString("caddress"),Integer.parseInt(rs.getString("pn")), rs.getInt("cid"));
                 callNumbers.add(client);
             }
             rs.close();

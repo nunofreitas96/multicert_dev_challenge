@@ -48,6 +48,7 @@
         <th scope="col">NIF</th>
         <th scope="col">Address</th>
         <th scope="col">Phone Number</th>
+        <th scope="col">Delete Client</th>
       </tr>
       </thead>
       <tbody  id = "totalCalleeTableBody">
@@ -57,6 +58,7 @@
         <td>{{item["client_nif"]}}</td>
         <td>{{item["client_address"]}}</td>
         <td>{{item["phone_number"]}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="DeleteClient(item['id'])" >Delete</button></td>
       </tr>
       </tbody>
     </table>
