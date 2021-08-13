@@ -26,6 +26,11 @@ export class CreateClientComponent implements OnInit {
 
 
   createClient() {
+
+    this.model.clientNif = "" + this.model.clientNif;
+
+    this.model.phoneNumber = "" + this.model.phoneNumber;
+
     if (this.model.clientName == "") {
       alert("No client name typed!")
       return
@@ -34,7 +39,7 @@ export class CreateClientComponent implements OnInit {
       alert("No address typed!")
       return
     }
-    if (this.model.clientNif.length != 9) {
+    if (this.model.clientNif.toString().length != 9) {
       alert("NIF does not have correct number of digits!")
       return
     }

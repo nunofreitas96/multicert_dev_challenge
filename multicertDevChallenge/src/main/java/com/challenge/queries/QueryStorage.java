@@ -8,7 +8,7 @@ public class QueryStorage {
     public String insertClientQuery(String client_name, int client_nif, String client_address, int phone_number){
         return "INSERT INTO client (" +
                 " client_name, client_nif, client_address, phone_number) " +
-                "VALUES ( "+ client_name +", "+ client_nif +", "+ client_address +", "+ phone_number +");";
+                "VALUES ( '"+ client_name +"', "+ client_nif +", '"+ client_address +"', "+ phone_number +");";
     }
 
     public String getAllClients(){
