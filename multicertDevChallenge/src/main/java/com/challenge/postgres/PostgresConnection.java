@@ -10,6 +10,8 @@ public class PostgresConnection {
     String username;
     String password;
 
+
+
     public PostgresConnection(String serverString, String username, String password) {
         this.serverString = serverString;
         this.username = username;
@@ -27,6 +29,8 @@ public class PostgresConnection {
             System.err.println( e.getClass().getName()+": "+ e.getMessage() );
             System.exit(0); }
     }
+
+
 
     public Connection getConnection() {
         return connection;
