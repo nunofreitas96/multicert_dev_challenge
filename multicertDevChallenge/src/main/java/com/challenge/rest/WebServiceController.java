@@ -15,7 +15,7 @@ import java.util.HashMap;
 @RestController
 public class WebServiceController {
 
-    PostgresConnection dbconnection = new PostgresConnection("localhost:5432/postgres","postgres","password");
+    PostgresConnection dbconnection = new PostgresConnection("db:5432/postgres","postgres","password");
     QueryExecutor querier = new QueryExecutor(dbconnection.getConnection());
 
 
