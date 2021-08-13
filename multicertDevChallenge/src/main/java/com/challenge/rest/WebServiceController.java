@@ -21,7 +21,7 @@ public class WebServiceController {
 
     @CrossOrigin
     @PostMapping("/addclient")
-    public ResponseEntity<?> newNumber(@RequestBody HashMap<String,String> newClient) {
+    public ResponseEntity<?> newClient(@RequestBody HashMap<String,String> newClient) {
         try {
 
             Client nC = new Client(newClient.get("clientName"), Integer.parseInt(newClient.get("clientNif")), newClient.get("clientAddress"), Integer.parseInt(newClient.get("phoneNumber")));
@@ -36,7 +36,7 @@ public class WebServiceController {
 
     @CrossOrigin
     @DeleteMapping("/deleteclient/{id}")
-    public ResponseEntity<?> deleteCall(@PathVariable Integer id) {
+    public ResponseEntity<?> deleteClient(@PathVariable Integer id) {
         try {
             querier.ExecuteDeleteQuery(id);
 
