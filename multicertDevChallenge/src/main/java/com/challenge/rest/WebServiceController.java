@@ -15,7 +15,7 @@ import java.util.HashMap;
 @RestController
 public class WebServiceController {
 
-    PostgresConnection dbconnection = new PostgresConnection("localhost:5432/postgres","postgres","password");
+    PostgresConnection dbconnection = new PostgresConnection("db:5432/postgres","postgres","password");
     QueryExecutor querier = new QueryExecutor(dbconnection.getConnection());
 
 
@@ -60,7 +60,7 @@ public class WebServiceController {
         }
     }
     @CrossOrigin
-    @GetMapping("/client/{name}")
+    @GetMapping("/clients/{name}")
     public ArrayList<Client> allClientsByName(@PathVariable String name) {
         try {
 
@@ -74,9 +74,10 @@ public class WebServiceController {
     }
 
     @CrossOrigin
-    @GetMapping("/clients/{nif}")
-    public Client allClientsByName(@PathVariable int nif) {
+    @GetMapping("/client/{nif}")
+    public ArrayList<Client> allClientsByNif(@PathVariable int nif) {
         try {
+
 
             return querier.ExecuteGetClientByNif(nif);
 
