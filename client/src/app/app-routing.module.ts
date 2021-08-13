@@ -6,6 +6,7 @@ import {CreateClientComponent} from "./create-client/create-client.component";
 import {ClientViewerComponent} from "./client-viewer/client-viewer.component";
 
 export const routes: Routes = [
+  { path: '', component: HomePageComponent},
   { path: 'homepage', component: HomePageComponent},
   {path: 'client-search', component: ClientSearchComponent},
   {path: 'create-client', component: CreateClientComponent},
