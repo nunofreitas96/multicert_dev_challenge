@@ -5,7 +5,7 @@
 -- Dumped from database version 13.3
 -- Dumped by pg_dump version 13.3
 
--- Started on 2021-08-13 12:16:37
+-- Started on 2021-08-14 00:27:23
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -79,6 +79,11 @@ ALTER TABLE ONLY public.client ALTER COLUMN id SET DEFAULT nextval('public."clie
 COPY public.client (client_name, client_nif, client_address, phone_number, id) FROM stdin;
 Ana	123456789	Uma morada	987654321	7
 Nuno Freitas	456789123	A Minha Casa	654987321	8
+Carlo Lopes	890691335	Morada2	657052420	10
+Filipe Lopes	952393369	Morada2	919947765	11
+Filipe Lopes	225888758	Morada3	912934676	12
+Amelia Meia	232818279	Morada4	914237229	13
+Filipe Lopes	545021533	Morada5	917584467	14
 \.
 
 
@@ -88,7 +93,7 @@ Nuno Freitas	456789123	A Minha Casa	654987321	8
 -- Name: client _id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."client _id_seq"', 8, true);
+SELECT pg_catalog.setval('public."client _id_seq"', 14, true);
 
 
 --
@@ -127,7 +132,7 @@ ALTER TABLE ONLY public.client
     ADD CONSTRAINT nif_not_null UNIQUE (client_nif);
 
 
--- Completed on 2021-08-13 12:16:37
+-- Completed on 2021-08-14 00:27:23
 
 --
 -- PostgreSQL database dump complete
