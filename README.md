@@ -24,6 +24,17 @@ If the application runs correctly you'll see the following in the terminal:
 
 ![alt text](https://i.imgur.com/YfL1RO8.png "correct")
 
+Afterwards in localhost:9000 you'll see the home page of the client:
+
+![alt text](https://i.imgur.com/2AVcA4G.png "home-page")
+
+It is possible to navigate through the client by using the navbar that sorts through the components.
+If you'd prefer to use links, the components of the client are as such:
+ - /homepage is the homepage of the client
+ - /create-client is the page where a user may create a new client register
+ - /client-viewer is the page where a user may view all clients and delete specific registers
+ - /client-search is the page dedicated to searching for a client through NIF or name (only through exact search), and if desired, delete specific registers 
+
 In testing, one of the pcs used for testing showed the following error:
 
 ![alt text](https://i.imgur.com/jPBwRo0.png "Logo Title Text 1")
