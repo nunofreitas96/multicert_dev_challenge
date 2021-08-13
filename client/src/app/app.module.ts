@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClientViewerComponent } from './client-viewer/client-viewer.component';
 import { ClientSearchComponent } from './client-search/client-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -26,7 +25,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
