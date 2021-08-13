@@ -1,14 +1,26 @@
 package com.challenge.model;
 
+import java.math.BigInteger;
+
 public class Client {
 
 
+    int id;
     String client_name;
     int client_nif;
     String client_address;
     int phone_number;
 
     public Client(String client_name, int client_nif, String client_address, int phone_number) {
+        this.client_name = client_name;
+        this.client_nif = client_nif;
+        this.client_address = client_address;
+        this.phone_number = phone_number;
+    }
+
+
+    public Client(String client_name, int client_nif, String client_address, int phone_number, int id) {
+        this.id = id;
         this.client_name = client_name;
         this.client_nif = client_nif;
         this.client_address = client_address;
@@ -45,5 +57,9 @@ public class Client {
 
     public void setPhone_number(int phone_number) {
         this.phone_number = phone_number;
+    }
+
+    public int getId() {
+        return id;
     }
 }

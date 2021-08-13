@@ -60,7 +60,7 @@ public class WebServiceController {
         }
     }
     @CrossOrigin
-    @GetMapping("/client/{name}")
+    @GetMapping("/clients/{name}")
     public ArrayList<Client> allClientsByName(@PathVariable String name) {
         try {
 
@@ -74,9 +74,10 @@ public class WebServiceController {
     }
 
     @CrossOrigin
-    @GetMapping("/clients/{nif}")
-    public Client allClientsByName(@PathVariable int nif) {
+    @GetMapping("/client/{nif}")
+    public ArrayList<Client> allClientsByNif(@PathVariable int nif) {
         try {
+
 
             return querier.ExecuteGetClientByNif(nif);
 

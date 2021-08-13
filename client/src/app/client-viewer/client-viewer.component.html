@@ -1,0 +1,29 @@
+<h1 class="display-2 mx-auto text-center">List All Clients</h1>
+
+
+<div class = "d-flex m-md-5  align-items-center " >
+  <div  class="table ">
+    <table  id = "totalCalleeTable" class="table table-hover border ">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Client Name</th>
+        <th scope="col">NIF</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Delete Client</th>
+      </tr>
+      </thead>
+      <tbody  id = "totalCalleeTableBody">
+      <tr *ngFor="let item of clientResults">
+        <th scope="row">1</th>
+        <td>{{item["client_name"]}}</td>
+        <td>{{item["client_nif"]}}</td>
+        <td>{{item["client_address"]}}</td>
+        <td>{{item["phone_number"]}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="DeleteClient(item['id'])" >Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
